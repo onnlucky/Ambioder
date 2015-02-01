@@ -46,6 +46,7 @@
     global rx_stop_1_overflow, rx_error
     global rx_jump
 
+extern w_buf
 
 ;*******************************************************************************
 ; Implementation
