@@ -46,8 +46,6 @@
     global rx_stop_1_overflow, rx_error
     global rx_jump
 
-extern w_buf
-
 ;*******************************************************************************
 ; Implementation
 ;*******************************************************************************
@@ -56,6 +54,7 @@ extern w_buf
 #include "iolatch.inc"
 #include "isr.inc"
     extern io_buffer
+    extern w_buf
 
 ;*******************************************************************************
 uart_rx_global_data UDATA_SHR
