@@ -4,11 +4,11 @@ OBJECTS:=$(SOURCES:.asm=.o)
 a.cod a.hex: $(OBJECTS)
 	gplink $(OBJECTS)
 
-%.o: %.asm *.inc
+%.o: %.asm
 	gpasm -p p16f684 -c $<
 
 clean:
-	rm -rf *.o *.hex *.lst
+	rm -rf *.o *.hex *.lst *.cod
 
 run: a.cod
-	gpsim a.cod
+	gpsim -c pulse.stc a.cod
